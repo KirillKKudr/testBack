@@ -16,7 +16,7 @@ tags:
   - name: Categories
     description: Operations with income and expense categories.
 servers:
-  - url: 
+  - url: https://testback-pp9c.onrender.com
   - url: http://localhost:3000/api-docs/
 paths:
   /auth/register:

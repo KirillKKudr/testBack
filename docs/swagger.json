@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": null
+      "url": "https://testback-pp9c.onrender.com"
     },
     {
       "url": "http://localhost:3000/api-docs/"
