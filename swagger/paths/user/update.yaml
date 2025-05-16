@@ -1,0 +1,44 @@
+tags:
+  - User
+security:
+  - bearerAuth: []
+summary: Update user information
+operationId: updateUser
+description: Update specific fields of the current user. Requires authorization token.
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          name:
+            type: string
+            description: User's name
+            example: John Doe
+          email:
+            type: string
+            format: email
+            maxLength: 64
+            description: Valid email address
+            example: test@example.com
+          balance:
+            type: number
+            description: User's balance
+            example: 0
+        additionalProperties: false
+        minProperties: 1
+responses:
+  '200':
+    description: Successfully updated user information
+    content:
+      application/json:
+        schema:
+          type: object
+          $ref: ../../components/schemas/user.yaml
+  '400':
+    $ref: ../../components/responses/400.yaml
+  '401':
+    $ref: ../../components/responses/401.yaml
+  '500':
+    $ref: ../../components/responses/500.yaml
